@@ -1,0 +1,335 @@
+
+.signika-negative-wide {
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+    font-family:'Oswald', sans-serif,'Signika Negative';
+    font-size: small;
+    color: rgb(55, 53, 53);
+    background-image: linear-gradient(to left bottom,rgb(187, 171, 161), rgb(110, 74, 40));
+    margin: 0;
+  }
+
+
+  /* Beispiel Text */
+  .singika {
+    font-family: 'Signika Negative';
+    font-size: 25pt;
+    color:rgb(187, 171, 161);
+    z-index: +3;
+    position: absolute; top: 15%; left: 20px;
+  }
+
+  @keyframes fade {
+	0%      { opacity: 0; }  
+	11.11%  { opacity: 1; }  
+	33.33%  { opacity: 1; }  
+	44.44%  { opacity: 0; }  
+}
+
+css-slides{
+  height: 370px;
+  display: block;
+}
+
+css-slides img { 
+  object-fit: cover;
+  height: 370px;
+  width: 2000px;
+    opacity:0; 
+    animation-name: fade; 
+    animation-duration: 9s; 
+    animation-iteration-count: infinite; 
+    position: absolute;
+    left: 0%;; 
+    right:0; 
+    top: 1px;
+    
+}
+
+css-slides img:nth-child(1) { animation-delay: 0s; }
+css-slides img:nth-child(2) { animation-delay: 3s; }
+css-slides img:nth-child(3) { animation-delay: 6s; } 
+
+
+
+ /* attempt 0a
+  .navbar{
+
+    z-index: +2;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right,rgb(139, 132, 120), rgb(110, 74, 40));
+    border-radius: 50px;
+    position:relative; top: 310px; left: -5px;
+    padding: 10px;
+
+  }
+
+  .navbar :not(:hover){
+    filter: opacity(0%);
+  }
+
+  .navbar :hover{
+    filter: opacity(100%);
+    transition: .4s;
+    cursor: pointer;
+  }
+*/
+ 
+ /* attempt 0b
+  .navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    font-size: 17px;
+    padding:  12px 15px;
+    font-family: 'Signika Negative'; font-size: 20px;
+  }
+
+  .navbar a:hover{ 
+    opacity: 0.7;
+    transition: .4s;
+  }
+
+  .navbar a:not(:hover){
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .4s;
+  }
+    */
+  
+    /* attempt 1a */
+    .navbar{
+      z-index: +2;
+      position: absolute; top: 0;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Signika Negative'; 
+      font-size: 20px;
+      font-optical-sizing: auto;
+      font-weight: 380;
+    }
+
+    .navbar.blank{
+      background-image: linear-gradient(to left bottom,rgb(201, 167, 109), rgb(110, 74, 40));
+      padding: 10px;
+    }
+
+    .navbar.blank:not(:hover){
+      filter: opacity(0%);
+      transition: 1s;
+    }
+  
+    .navbar.blank:hover{
+      filter: opacity(100%);
+      transition: .7s;
+      cursor: pointer;
+    }    
+
+    .navbar a{
+      z-index: +3;
+      float: left;
+      display: block;
+      padding: 7px 25px;
+      text-decoration: none;
+      color: rgb(39, 39, 39);
+    }
+
+    .navbar a:not(:hover){
+      filter: opacity(50%);
+      transition: .4s;
+    }
+
+    .navbar a:hover{
+      filter: opacity(100%);
+      transition: .7s;
+      cursor: pointer;
+      color: #ffffff;
+    }   
+  
+.product-info{
+  max-width: 700px;
+  display: flex;
+  align-items:center;
+}
+
+.product-image{
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-left: 20px;
+  box-shadow:rgb(110, 74, 40) 0px 5px 5px;
+}
+
+.product-text{
+  padding-left: 10px;
+  width: 350px;
+}
+
+.padding{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.product-row{
+  display: flex;
+  align-items: center;
+}
+
+.product-image:not(:hover){
+  filter: grayscale(85%);
+  cursor: pointer;
+  transition: .4s;
+}
+
+.product-image:hover{
+  filter: grayscale(0%);
+  transform: scale(1.01);
+  transition: .5s;
+}
+
+.table-style{
+  font-size: 15px;
+}
+
+.contact{
+  padding-left: 15px;
+}
+
+.me{
+  font-size: 45px;
+}
+
+input[type=text], select, textarea {
+  width: 150%;
+  padding: 10px;
+  border: .5px solid rgba(39, 39, 39, 0.555);
+  background-color: rgba(250, 235, 215, 0.4);
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  font-family:'Signika Negative';
+  background-color: #d3d3d3;
+  filter: opacity(50%);
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  filter: opacity(100%);
+  transition: .4s;
+}
+
+input[type=submit]:not(:hover) {
+  filter: opacity(50%);
+  transition: .4s;
+}
+
+td{
+  vertical-align:top;
+}
+
+.artikel{
+  max-width: 500px;
+  padding-right: 100px;
+  padding-left: 5%;
+}
+
+.daten-row{
+  display: flex;
+  align-items:start;
+}
+
+footer {
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(39, 39, 39);
+}
+
+.fuß{
+  background-image: linear-gradient(to left top,rgb(201, 167, 109), rgb(110, 74, 40));
+  position: absolute bottom 0;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-top: 5%;
+
+}
+
+.feta{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+ 
+  
+}
+
+.feta > div {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.fuß-spalte a{
+  text-decoration: none;
+  opacity: 0.5;
+  
+}
+.fuß-spalte a:hover{ 
+  opacity: 1;
+  transition: .4s;
+}
+
+.ig{
+  width: auto; height: 40px;
+}
+.ix{
+  width: auto; height: 34px;
+}
+
+.text-me{
+  font-family:'Oswald', sans-serif;
+  font-size: 16px;
+  padding-left: 10%;
+  padding-top: 5px;
+}
+
+.map{
+  display: flex;
+}
+
+iframe{
+  border-radius: 5px;
+  box-shadow:rgb(110, 74, 40) 0px 5px 5px;
+}
+
+.times-info{
+  max-width: 1320px;
+  display: flex;
+  align-items:top;
+}
+
+.info-image{
+  border-radius: 10px;
+  width: 350px;
+  height: 400px;
+  object-fit:cover;
+  margin-left: 20px;
+  margin-right: 10px;
+  box-shadow:rgb(110, 74, 40) 0px 5px 5px;
+}
